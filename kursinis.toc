@@ -3,3 +3,11 @@
 \select@language {lithuanian}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Įvadas}{3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.}Įmonės apibūdinimas}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.}Veiklos sritis ir teikiamos paslaugos}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.}Organizacinė struktūra}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.}Darbo sąlygos}{5}% 
