@@ -1,9 +1,9 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'kursinis.blg'
-[32] biber:315> INFO - === Mon Apr 13, 2020, 14:23:17
-[51] Biber.pm:371> INFO - Reading 'kursinis.bcf'
-[107] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
-[116] Utils.pm:193> WARN - The file 'kursinis.bcf' does not contain any citations!
-[125] bbl.pm:636> INFO - Writing 'kursinis.bbl' with encoding 'UTF-8'
-[125] bbl.pm:739> INFO - Output to kursinis.bbl
-[125] Biber.pm:110> INFO - WARNINGS: 1
+[19] biber:315> INFO - === Mon Apr 13, 2020, 16:45:50
+[34] Biber.pm:371> INFO - Reading 'kursinis.bcf'
+[78] Biber.pm:889> INFO - Found 0 citekeys in bib section 0
+[82] Utils.pm:193> WARN - The file 'kursinis.bcf' does not contain any citations!
+[87] bbl.pm:636> INFO - Writing 'kursinis.bbl' with encoding 'UTF-8'
+[87] bbl.pm:739> INFO - Output to kursinis.bbl
+[87] Biber.pm:110> INFO - WARNINGS: 1
