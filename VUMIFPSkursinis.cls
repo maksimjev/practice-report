@@ -66,9 +66,11 @@
 \newcommand{\department}[1]{\def\@department{#1}}
 \newcommand{\supervisor}[1]{\def\@supervisor{#1}}
 \newcommand{\reviewer}[1]{\def\@reviewer{#1}}
+\newcommand{\reviewerstatus}[1]{\def\@reviewerstatus{#1}}
 \newcommand{\status}[1]{\def\@status{#1}}
-\newcommand{\titleineng}[1]{\def\@titleineng{#1}}
+%\newcommand{\titleineng}[1]{\def\@titleineng{#1}}
 \newcommand{\secondauthor}[1]{\def\@secondauthor{#1}}
+\newcommand{\company}[1]{\def\@company{#1}}
 
 % Pirmos eilutės paragrafe atitraukimas 1 cm
 \setlength{\parindent}{1cm}
@@ -100,6 +102,12 @@
         (para\v{s}as) }}}
 }
 
+\newcommand{\@signaturewithvalue}{%
+\parbox[t]{2.5cm}{%
+\makebox[2.5cm]{\raisebox{-0.5ex}{\scriptsize
+(įvertinimas, para\v{s}as) }}}
+}
+
 \newcommand{\checkifdefined}[2]{%
     % Patikriname, ar visa reikalinga informacija tituliniam puslapiui
     % buvo nurodyta. #1 yra tikrinama reikšmė (be \ priekyje),
@@ -120,8 +128,8 @@
 
      \null\vfil
      \vskip 2.5cm
-     {\singlespacing \LARGE \textbf{\@title} \par}
-     {\singlespacing \Large \textbf{\@titleineng} \par}%
+%     {\singlespacing \LARGE \textbf{\@title} \par}
+%     {\singlespacing \Large \textbf{\@titleineng} \par}%
      \vskip 0.8cm
      {\large \@papertype}%
   \end{center}
@@ -131,10 +139,13 @@
         \large
         \singlespacing
         {\begin{tabular}[t]{l l l}%
-        \medskip Atliko: &\; \@status \\
+        \medskip Praktiką atliko: &\; \@status \\
         \medskip\bigskip   &\; \@author \hfill &\@signatureplace \\
-        \bigskip Universiteto praktikos vadovas: &\; \@supervisor \hfill &\@signatureplace \\
-        Įmonės praktikos vadovas: &\; \@reviewer \hfill &\@signatureplace
+        \bigskip Praktikos institucija:  &\; \@company \hfill &\ \\
+        \bigskip Organizacijos praktikos vadovė:  &\; \@reviewerstatus \hfill &\\
+        \bigskip   &\; \@reviewer \hfill &\@signaturewithvalue \\
+%        \bigskip Organizacijos praktikos vadovės įvertinimas:  &\;  \hfill \@signaturewithvalue \\
+         Universiteto praktikos vadovas: &\; \@supervisor \hfill &\@signatureplace
         \end{tabular} \par}%
      \end{flushright}
      \vskip 4cm
@@ -144,8 +155,9 @@
         \large
         \singlespacing
         {\begin{tabular}[t]{l l l}%
-        \medskip Atliko: &\; \@status \\
+        \medskip Praktiką atliko: &\; \@status \\
         \bigskip   &\; \@author \hfill &\@signatureplace \\
+        \bigskip   &\; \@company \hfill &\@signatureplace \\
         \medskip\bigskip &\; \@secondauthor \hfill &\@signatureplace \\
         \bigskip Universiteto praktikos vadovas: &\; \@supervisor \hfill &\@signatureplace \\
         Įmonės praktikos vadovė: &\; \@reviewer \hfill &\@signatureplace
@@ -163,10 +175,12 @@
   % Atlaisviname panaudotus kintamuosius
   \global\let\@outputtitle\relax
   \global\let\thanks\relax
-  \global\let\maketitle\relax
+%  \global\let\maketitle\relax
   \global\let\@papertype\@empty
   \global\let\@thanks\@empty
   \global\let\@author\@empty
+  \global\let\@company\@empty
+  \global\let\@reviewerstatus\@empty
   \global\let\@date\@empty
   \global\let\@title\@empty
   \global\let\@university\@empty
@@ -175,8 +189,10 @@
   \global\let\@papertype\@empty
   \global\let\@supervisor\@empty
   \global\let\@reviewer\@empty
-  \global\let\title\relax
+%  \global\let\title\relax
   \global\let\author\relax
+  \global\let\company\relax
+  \global\let\reviewerstatus\relax
   \global\let\date\relax
   \global\let\and\relax
   \global\let\department\relax
