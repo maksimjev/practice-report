@@ -4,7 +4,7 @@
 %% Latest version available here: https://github.com/LIKS/course_work_template_vu_mif_se
 %% Any suggestions or contributions are welcome!  Also see: http://latex.liks.lt!
 %
-%%  License CC BY 4.0 (see more at http://creativecommons.org/licenses/by/4.0/) 
+%%  License CC BY 4.0 (see more at http://creativecommons.org/licenses/by/4.0/)
 % You are free to (a) share - copy and redistribute the material in any medium
 % or format (b) adapt - remix, transform, and build upon the material for any
 % purpose, even commercially. As long as you give appropriate credit, provide a
@@ -45,7 +45,7 @@
 \renewcommand{\footrulewidth}{0pt}
 \lhead{}
 \chead{}
-\rhead{} 
+\rhead{}
 \lfoot{}
 \cfoot{}
 \rfoot{\thepage} % Numeris bus puslapio apačioje dešinėje
@@ -71,6 +71,12 @@
 %\newcommand{\titleineng}[1]{\def\@titleineng{#1}}
 \newcommand{\secondauthor}[1]{\def\@secondauthor{#1}}
 \newcommand{\company}[1]{\def\@company{#1}}
+% THIS IS MY NEWLY DEFINED COMMAND
+\newcommand\tline[2] {$\underset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+
+%THIS ONE
+\newcommand\tabove[2] {$\overset{\text{#1}}{\text{\underline{\hspace{#2}}}}$}
+
 
 % Pirmos eilutės paragrafe atitraukimas 1 cm
 \setlength{\parindent}{1cm}
@@ -89,6 +95,7 @@
     minnames=4,
 ]{biblatex}
 \RequirePackage[style=lithuanian]{csquotes}
+\RequirePackage{amsmath}
 
 % Pliuso ženklas, kuris rodomas esant >3 autoriams, sumažinamas ir pakeliamas
 \renewcommand*{\labelalphaothers}{\textsuperscript{+}}
@@ -100,12 +107,6 @@
     \parbox[t]{2.5cm}{%
         \makebox[2.5cm]{\raisebox{-0.5ex}{\scriptsize
         (para\v{s}as) }}}
-}
-
-\newcommand{\@signaturewithvalue}{%
-\parbox[t]{2.5cm}{%
-\makebox[2.5cm]{\raisebox{-0.5ex}{\scriptsize
-(įvertinimas, para\v{s}as) }}}
 }
 
 \newcommand{\checkifdefined}[2]{%
@@ -128,26 +129,34 @@
 
      \null\vfil
      \vskip 2.5cm
-%     {\singlespacing \LARGE \textbf{\@title} \par}
+     {\singlespacing \LARGE \MakeUppercase{\@title} \par}
 %     {\singlespacing \Large \textbf{\@titleineng} \par}%
      \vskip 0.8cm
-     {\large \@papertype}%
+%     {\large \@papertype}
   \end{center}
   \@ifundefined{@secondauthor}{
-     \vskip 3cm
-     \begin{flushright}
-        \large
-        \singlespacing
-        {\begin{tabular}[t]{l l l}%
-        \medskip Praktiką atliko: &\; \@status \\
-        \medskip\bigskip   &\; \@author \hfill &\@signatureplace \\
-        \bigskip Praktikos institucija:  &\; \@company \hfill &\ \\
-        \bigskip Organizacijos praktikos vadovė:  &\; \@reviewerstatus \hfill &\\
-        \bigskip   &\; \@reviewer \hfill &\@signaturewithvalue \\
-%        \bigskip Organizacijos praktikos vadovės įvertinimas:  &\;  \hfill \@signaturewithvalue \\
-         Universiteto praktikos vadovas: &\; \@supervisor \hfill &\@signatureplace
-        \end{tabular} \par}%
-     \end{flushright}
+     \vskip 1cm
+  \begin{center}
+      \singlespacing
+      {\begin{tabular}[t]{l l}%
+           & \medskip \null\hfill  Praktiką atliko: \hspace{3 mm} \tabove {\normalsize {Maksim Prokofjev}}{4.75in}  \\
+           \vspace{1cm}
+           & \medskip \null\hfill \hspace{3.1cm} \tabove {\normalsize {Programų sistemos, bakaluras, IV kursas}}{4.75in} \\
+
+           & \medskip \null\hfill Praktikos institucija:\hspace{3 mm} \tabove {\normalsize {UAB „INVENTI“}}{4.5in} \\
+           & \medskip \null\hfill Organizacijos praktikos vadovas:\hspace{3 mm} \tabove {\normalsize {Projektų vadovė Kristina Šaulinskienė}}{3.7in} \\
+           & \medskip \null\hfill Organizacijos praktikos vadovo įvertinimas:\hspace{3 mm} \tabove {\normalsize {}}{2.95in} \\
+           & \medskip \null\hfill Universiteto praktikos vadovas:\hspace{3 mm} \tabove {\normalsize {Lekt. Gediminas Rimša}}{3.8in} \\
+
+           & \medskip \null\hfill \hspace{9cm} \tabove {\normalsize {}}{2.5in} \\[0.5in]
+
+           & \medskip \null\hfill \hspace{6cm} \small{Ataskaitos įteikimo data} \hspace{3 mm} \tabove {\small {}}{2in}  \\
+           & \medskip \null\hfill \hspace{6cm} \small{Registracijos Nr.} \hspace{3 mm} \tabove {\small {}}{2.4in}  \\
+           & \medskip \null\hfill \hspace{7cm} \small{Įvertinimas} \hspace{3 mm} \tabove {\small {}}{2.4in}  \\
+
+
+      \end{tabular} \par}%
+  \end{center}
      \vskip 4cm
    }{
      \vskip 2.8cm
@@ -167,7 +176,7 @@
    }
 
   \begin{center}
-    {\singlespacing \@date \par}%   
+    {\singlespacing \@date \par}%
   \end{center}\par
   \@thanks
   \vfil\null
@@ -207,7 +216,7 @@
 % Skyriaus pavadinimas, turinyje neturintis numerio
 \newcommand{\sectionnonum}[1]{%
     \section*{#1}%
-    \addcontentsline{toc}{section}{#1}% 
+    \addcontentsline{toc}{section}{#1}%
 }
 
 % Skyriaus pavadinimas, turinyje neturintis numerio
@@ -270,7 +279,7 @@
     }%
     \setcounter{section}{0}%
     \renewcommand{\thesection}{nr. \arabic{section}}%
-    % Insert record to TOC 
+    % Insert record to TOC
     \addcontentsline{toc}{section}{\MakeUppercase{Priedai}}%}
 }
 

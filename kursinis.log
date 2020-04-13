@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.23)  13 APR 2020 20:38
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.23)  13 APR 2020 23:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -722,52 +722,9 @@ File: csquotes.cfg
 )
 Package csquotes Info: Disabling multilingual quotes.
 Package csquotes Info: Redefining alias 'default' -> 'lithuanian'.
-)) (./preamble.tex
-(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
-Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
-
-Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
-\c@ALG@line=\count400
-\c@ALG@rem=\count401
-\c@ALG@nested=\count402
-\ALG@tlm=\skip111
-\ALG@thistlm=\skip112
-\c@ALG@Lnr=\count403
-\c@ALG@blocknr=\count404
-\c@ALG@storecount=\count405
-\c@ALG@tmpcounter=\count406
-\ALG@tmplength=\skip113
-) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
-Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
-Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
-nment
-
-(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count407
-\float@exts=\toks26
-\float@box=\box45
-\@float@everytoks=\toks27
-\@floatcapt=\box46
-)
-\@float@every@algorithm=\toks28
-\c@algorithm=\count408
-)
-(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
-Package: algpseudocode 
-
-Document Style - pseudocode environments for use with the `algorithmicx' style
-) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
-Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
-\@emptytoks=\toks29
-\symAMSa=\mathgroup4
-\symAMSb=\mathgroup5
-LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
-(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-)
-(/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2018/12/01 v2.17b AMS math features
-\@mathmargin=\skip114
+\@mathmargin=\skip111
 
 For additional information on amsmath, use the `?' option.
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amstext.sty
@@ -775,7 +732,7 @@ Package: amstext 2000/06/29 v2.01 AMS text
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks30
+\@emptytoks=\toks26
 \ex@=\dimen153
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsbsy.sty
@@ -785,43 +742,84 @@ Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 (/usr/share/texlive/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2016/03/08 v2.02 operator names
 )
-\inf@bad=\count409
+\inf@bad=\count400
 LaTeX Info: Redefining \frac on input line 223.
-\uproot@=\count410
-\leftroot@=\count411
+\uproot@=\count401
+\leftroot@=\count402
 LaTeX Info: Redefining \overline on input line 385.
-\classnum@=\count412
-\DOTSCASE@=\count413
+\classnum@=\count403
+\DOTSCASE@=\count404
 LaTeX Info: Redefining \ldots on input line 482.
 LaTeX Info: Redefining \dots on input line 485.
 LaTeX Info: Redefining \cdots on input line 606.
-\Mathstrutbox@=\box47
-\strutbox@=\box48
+\Mathstrutbox@=\box45
+\strutbox@=\box46
 \big@size=\dimen155
 LaTeX Font Info:    Redeclaring font encoding OML on input line 729.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 730.
-\macc@depth=\count414
-\c@MaxMatrixCols=\count415
+\macc@depth=\count405
+\c@MaxMatrixCols=\count406
 \dotsspace@=\muskip17
-\c@parentequation=\count416
-\dspbrk@lvl=\count417
-\tag@help=\toks31
-\row@=\count418
-\column@=\count419
-\maxfields@=\count420
-\andhelp@=\toks32
+\c@parentequation=\count407
+\dspbrk@lvl=\count408
+\tag@help=\toks27
+\row@=\count409
+\column@=\count410
+\maxfields@=\count411
+\andhelp@=\toks28
 \eqnshift@=\dimen156
 \alignsep@=\dimen157
 \tagshift@=\dimen158
 \tagwidth@=\dimen159
 \totwidth@=\dimen160
 \lineht@=\dimen161
-\@envbody=\toks33
-\multlinegap=\skip115
-\multlinetaggap=\skip116
-\mathdisplay@stack=\toks34
+\@envbody=\toks29
+\multlinegap=\skip112
+\multlinetaggap=\skip113
+\mathdisplay@stack=\toks30
 LaTeX Info: Redefining \[ on input line 2844.
 LaTeX Info: Redefining \] on input line 2845.
+)) (./preamble.tex
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+Package: algorithmicx 2005/04/27 v1.2 Algorithmicx
+
+Document Style algorithmicx 1.2 - a greatly improved `algorithmic' style
+\c@ALG@line=\count412
+\c@ALG@rem=\count413
+\c@ALG@nested=\count414
+\ALG@tlm=\skip114
+\ALG@thistlm=\skip115
+\c@ALG@Lnr=\count415
+\c@ALG@blocknr=\count416
+\c@ALG@storecount=\count417
+\c@ALG@tmpcounter=\count418
+\ALG@tmplength=\skip116
+) (/usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+Invalid UTF-8 byte or sequence at line 11 replaced by U+FFFD.
+Package: algorithm 2009/08/24 v0.1 Document Style `algorithm' - floating enviro
+nment
+
+(/usr/share/texlive/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count419
+\float@exts=\toks31
+\float@box=\box47
+\@float@everytoks=\toks32
+\@floatcapt=\box48
+)
+\@float@every@algorithm=\toks33
+\c@algorithm=\count420
+)
+(/usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algpseudocode.sty
+Package: algpseudocode 
+
+Document Style - pseudocode environments for use with the `algorithmicx' style
+) (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
+\symAMSa=\mathgroup4
+\symAMSb=\mathgroup5
+LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
+(Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/bm.sty
 Package: bm 2017/01/16 v1.2c Bold Symbol Support (DPC/FMi)
@@ -862,7 +860,7 @@ Package graphics Info: Driver file: xetex.def on input line 99.
 (/usr/share/texlive/texmf-dist/tex/latex/listings/listings.sty
 \lst@mode=\count421
 \lst@gtempboxa=\box49
-\lst@token=\toks35
+\lst@token=\toks34
 \lst@length=\count422
 \lst@currlwidth=\dimen164
 \lst@column=\count423
@@ -903,7 +901,7 @@ Package: subfig 2005/06/28 ver: 1.3 subfig package
 \WF@size=\dimen170
 \c@WF@wrappedlines=\count434
 \WF@box=\box51
-\WF@everypar=\toks36
+\WF@everypar=\toks35
 Package: wrapfig 2003/01/31  v 3.6
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
@@ -922,12 +920,12 @@ Package: array 2018/12/30 v2.4k Tabular extension package (FMi)
 \col@sep=\dimen171
 \ar@mcellbox=\box52
 \extrarowheight=\dimen172
-\NC@list=\toks37
+\NC@list=\toks36
 \extratabsurround=\skip122
 \backup@length=\skip123
 \ar@cellbox=\box53
 )
-\everycr=\toks38
+\everycr=\toks37
 \minrowclearance=\skip124
 )
 LaTeX Info: Redefining \color on input line 709.
@@ -963,10 +961,10 @@ Package: booktabs 2016/04/27 v1.618033 publication quality tables
 )
 (/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
 Package: enumitem 2019/02/04 v3.8 Customized lists
-\enitkv@toks@=\toks39
+\enitkv@toks@=\toks38
 \labelindent=\skip125
 \enit@outerparindent=\dimen186
-\enit@toks=\toks40
+\enit@toks=\toks39
 \enit@inbox=\box54
 \enit@count@id=\count440
 \enitdp@description=\count441
@@ -1165,10 +1163,20 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 
 
 ]) (./include/1-company-brief.tex [4])
+(./include/2-practice.tex [5
 
-LaTeX Warning: Empty bibliography on input line 18.
+]) [6
 
-[5
+] [7]
+
+Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
+
+Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
+(biblatex)                Please use '\mkdaterangeiso'.
+
+[8
 
 ] (./kursinis.aux)
 Package logreq Info: Writing requests to 'kursinis.run.xml'.
@@ -1176,12 +1184,12 @@ Package logreq Info: Writing requests to 'kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 25968 strings out of 492912
- 507517 string characters out of 6134893
- 1015153 words of memory out of 5000000
- 29701 multiletter control sequences out of 15000+600000
- 545336 words of font info for 99 fonts, out of 8000000 for 9000
+ 26175 strings out of 492912
+ 511764 string characters out of 6134893
+ 1015606 words of memory out of 5000000
+ 29900 multiletter control sequences out of 15000+600000
+ 544022 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,12n,96p,879b,790s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,17n,96p,879b,6114s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on kursinis.pdf (5 pages).
+Output written on kursinis.pdf (8 pages).
