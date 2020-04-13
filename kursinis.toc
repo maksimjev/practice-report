@@ -4,20 +4,20 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{Įvadas}{3}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.}Įmonės apibūdinimas}{5}% 
+\contentsline {section}{\numberline {1.}Praktikos vietos aprašymas}{5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.1.}Veiklos sritis ir teikiamos paslaugos}{5}% 
+\contentsline {subsection}{\numberline {1.1.}Įmonės apibūdinimas}{5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.2.}Organizacinė struktūra}{5}% 
+\contentsline {subsection}{\numberline {1.2.}Įmonės organizacinė struktūra}{5}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.3.}Darbo sąlygos}{5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.}Praktikos veiklos aprašymas}{6}% 
+\contentsline {section}{\numberline {2.}Praktikos veiklos aprašymas}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.1.}Projektas}{6}% 
+\contentsline {subsection}{\numberline {2.1.}Projektas}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.2.}Darbo procesas}{6}% 
+\contentsline {subsection}{\numberline {2.2.}Darbo procesas}{7}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {2.3.}Projekte naudojamos technologijos}{6}% 
+\contentsline {subsection}{\numberline {2.3.}Projekte naudojamos technologijos}{8}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Šaltiniai}{8}% 
+\contentsline {section}{Šaltiniai}{9}% 
