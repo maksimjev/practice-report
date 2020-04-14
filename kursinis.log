@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.23)  14 APR 2020 00:08
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.23)  14 APR 2020 19:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1173,7 +1173,10 @@ File: img/medus.png Graphic file (type bmp)
 <img/medus.png>
  [7
 
-]) [8]
+] [8]
+File: img/options.png Graphic file (type bmp)
+<img/options.png>
+) (./include/3-tasks.tex) [9]
 
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
@@ -1182,7 +1185,7 @@ Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
 (biblatex)                Please use '\mkdaterangeiso'.
 
-[9
+[10
 
 ] (./kursinis.aux)
 Package logreq Info: Writing requests to 'kursinis.run.xml'.
@@ -1190,12 +1193,12 @@ Package logreq Info: Writing requests to 'kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26194 strings out of 492912
- 512016 string characters out of 6134893
- 1015606 words of memory out of 5000000
- 29914 multiletter control sequences out of 15000+600000
+ 26202 strings out of 492912
+ 512145 string characters out of 6134893
+ 1021606 words of memory out of 5000000
+ 29918 multiletter control sequences out of 15000+600000
  544022 words of font info for 96 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,17n,96p,879b,6114s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,17n,96p,879b,6116s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on kursinis.pdf (9 pages).
+Output written on kursinis.pdf (10 pages).
