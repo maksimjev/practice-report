@@ -1,0 +1,43 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\defcounter {refsection}{0}\relax 
+\select@language {lithuanian}
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Įvadas}{3}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {1.}Praktikos vietos aprašymas}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.1.}Įmonės apibūdinimas}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.2.}Įmonės organizacinė struktūra}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {1.3.}Darbo sąlygos}{5}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {2.}Praktikos veiklos aprašymas}{7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.1.}Projektas}{7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.2.}Darbo procesas}{7}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.3.}Projekte naudojamos technologijos}{8}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {2.4.}Programavimo darbai}{9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.1.}Užduotis: Pritaikyti PDF šablonus televizijos paslaugų sutartims}{9}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.2.}Užduotis: El. pašto adreso keitimas.}{12}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {2.4.3.}Užduotis: Krepšelio REST API dokumentacija.}{13}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {3.}Rezultatai}{16}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.1.}Išvados ir apibendrinimai}{16}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {3.2.}Privalumai ir trūkumai}{16}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.1.}Privalumai}{16}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.2.}Trūkumai}{16}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {3.2.3.}Pasiūlymai}{17}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{Šaltiniai}{18}% 

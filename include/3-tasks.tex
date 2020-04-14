@@ -74,7 +74,8 @@ atliekamas asinchroninis tikrinimas, ar nurodytas naujas el. pašto adresas yra 
     \label{img:email-change}
 \end{figure}
 
-\textbf{Analizė.} Atliekant analizę pastebėta, kad procesas beveik sutampa su „MSISDN“ keitimo procesu, išskyrus validavimo žingsnį, kadangi keičiant „MSISDN“,
+\textbf{Analizė.}
+Atliekant analizę pastebėta, kad procesas beveik sutampa su „MSISDN“ keitimo procesu, išskyrus validavimo žingsnį, kadangi keičiant „MSISDN“,
 vartotojas atlieka paiešką tarp neužimtų „MSISDN“, o el. pašto adresu atveju - adresas įvedamas rankiniu būdu. Pakeitimas turi būti atliktas keliuose servisuose,
 taip pat ir UI aplikacijoje. Taip pat pastebėta, kad el. pašto adreso validavimo API yra įgyvendintas, ir naudojamas naujos TV paslaugų sutarties sudarymo metu.
 
@@ -85,8 +86,8 @@ egzistuojantis el. pašto adreso validavimo API.
 \textbf{Įgyvendinimas.}
 Saugomas procedūras įgyvendina „Bitė Lietuva“ programuotojai, reikėjo įgyvendinti šios procedūros kvietimą servise, kuris sąveikauja su apskaitos sistemos duomenų baze.
 Buvo įgyvendintas SOAP protokolo API, kurio kvietimui buvo atnaujintas kitas servisas, atsakingas už REST užklausų vertimą į SOAP. Šio serviso API kvietimas įgyvendintas
-kitame servise, kuris glaudžiai bendrauja su UI aplikacija. Šiame servise taip pat įgyvendintas el. pašto validavimas, tam kad vartotojas negalėtų apeiti šį žingsnį aplikacijos UI
-sluoksnyje. El. pašto adreso validavimo žingsnis buvo įgyvendintas tiek sinchroniškai, tiek asinchroniškai (\ref{img:email-validate} pav.).
+kitame servise, kuris glaudžiai bendrauja su UI aplikacija. Šiame servise taip pat įgyvendintas el. pašto validavimas, tam kad vartotojas negalėtų apeiti šį žingsnį,
+nenaudamas aplikacijos UI. El. pašto adreso validavimo žingsnis buvo įgyvendintas tiek sinchroniškai, tiek asinchroniškai (\ref{img:email-validate} pav.).
 Sudėtingumas iškilo atlikus el. pašto validavimo API. API įgyvendintas naudojant „Apache Camel“ technologiją, su kurią patirties neturėjau.
 Naujos paslaugų sutarties sudarymo metu, el. pašto validavimo API reikalauja kitų duomenų iš užsakymų krepšelio, kurių el. pašto keitimo proceso metu, nėra.
 Taip pat servisas, API kvietimo metu, iškviečia 5 skirtingų servisų API, tam kad užtikrinti el. pašto unikalumą. Jeigu bent vienas API grąžina klaidą, vartotojui grąžinamas
@@ -103,4 +104,45 @@ El. pašto keitimo metu, tam tikros validacijos nėra būtinos, todėl nuspręst
 kuriuos kvietimus būtina atlikti.
 
 
-\subsubsection{Užduotis: .}
+\subsubsection{Užduotis: Krepšelio REST API dokumentacija.}
+
+\textbf{Problema.}
+Kaip buvo minėta ankščiau, dauguma sistemos procesų vykdomi per krepšelį, nurodant proceso pavadinimą. Sistemoje galima pridėti skirtingas paslaugas į krepšelį,
+pašalinti iš krepšelio, tačiau svarbiausias žingsnis - krepšelio tvirtinimas (angl. „checkout“). Šis žingsnis reiškia, kad krepšelio duomenys perduodami kitam servisui sutarties
+generavimui. Tačiau pardavimus planuojama vykdyti ne tik per „medus“ sistemą, „Bitė Lietuva“ programuotojų komanda vykdo savitarnos kūrimo projektą „Go3 | BITĖ“, leidžianti
+klientui savarankiškai užsisakyti paslaugas. Šiam funkcionalumui įgyvendinti buvo sukūrtas krepšelio tvirtinimo REST API, kuriam perduodant duomenis, paslaugos galėtų būti aktyvuotos
+be UI aplikacijos pagalbos. Kadangi REST API įgyvendino „INVENTI“ programuotojai, šios užduoties tikslas - suteikti informaciją apie API, padėti „Bitė Lietuva“ sukurti integraciją.
+
+\textbf{Analizė.}
+Analizę sudarė informacijos apie REST API laukus rinkimas. Pagrindiniai informacijos šaltiniai - komandos nariai, turintys patirties dirbant su šia sistema,
+taip pat „Bitė Lietuva“ darbuotojai - sistemos analitikai.
+
+\textbf{Sprendimas.}
+Nuspręsta REST API dokumentaciją sudaryti naudojant „Swagger 2“ biblioteką. Ši biblioteka leidžia nesudėtingai, anotacijų pagalba, dokumentuoti sistemos REST API.
+Biblioteka yra lengvai konfigūruojama, taip pat yra galimybė sukonfigūruoti „Swagger UI“ (\ref{img:swagger} pav.\footnotemark[1]) sąsają,
+kuri leidžia atlikti REST API operacijas, ir yra pasiekiama  per nuorodą. Taip pat ši biblioteka leidžia REST API duomenis pasiekti JSON formatu, dėl šios priežasties,
+yra galimybė importuoti API dokumentaciją ir naudotis kitais įrankiais, pavyzdžiui, „Postman“.
+
+\footnotetext[1]{Paimta iš oficialaus \textit{„swagger.io“} puslapio.}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.25]{img/swagger.png}
+    \caption{„Swagger UI“ sąsaja.}
+    \label{img:swagger}
+\end{figure}
+
+\textbf{Įgyvendinimas.}
+Apibrėžtiems REST API užklausos laukams buvo sudėtos anotacijos, kurioje nurodoma, už ką laukas atsakingas, taip pat pateikiami pavyzdžiai (\ref{img:customer-dto} pav.).
+Tačiau šio API problema tame, kad didžioji dalis laukų yra neprivalomi. Dėl šios priežasties, šie laukai nėra apibrėžti kode, o sudedami į „Map“ duomenų struktūrą, iš kurios
+vėliau ištraukiami pagal raktą. Tačiau „Swagger 2“ leidžia apibrėžti savo duomenų tipą, ir jį priskirti bet kuriam laukui. Atlikus detalesnę kodo analizę, pavyko surinkti
+visas įmanomas šios duomenų struktūros reikšmes, kurios vėliau buvo uždokumentuotos.
+„Bitė Lietuva“ programuotojų komandai pora kartų kilo problemos su šiuo REST API, tačiau pateikus užklausos pavyzdį, klaidos buvo greitai identifikuotos ir pašalintos.
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/customer-dto.png}
+    \caption{„Swagger 2“ dokumentavimo pavyzdys.}
+    \label{img:customer-dto}
+\end{figure}
