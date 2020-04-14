@@ -32,29 +32,33 @@ susitikimai vykdavo gyvai. Kiekvienas „stand-up“ dalyvis trumpai nupasakoja,
 Programavimo darbai prasideda nuo „Jira“ užduoties statuso pakeitimo, kurį pradėjus darbą reikia pakeisti į „in progress“. Programavimo darbams sukuriama nauja GIT šaka, kurios pavadinimas
 - užduoties numeris. Atlikus programavimo darbus, kodo versijavimo sistemoje
 sukuriamas „merge request“ į vykdomo projekto šaką, kurio paskirtis - kodo peržiūra. Kodo peržiūras atlieka kiti komandos programuotojai, peržiūrėjus kodą, savo pastabas surašo
-„Gitlab“ versijavimo sistemoje. Jeigu pastabų nėra - duodamas leidimas atlikti šakų suvienijimą. Tada galima pakeisti užduoties statusą į „done“.
+„Gitlab“ versijavimo sistemoje. Jeigu pastabų nėra - duodamas leidimas atlikti šakų suvienijimą. Tada galima pakeisti užduoties statusą į \textit{„done“}.
 Kai visos užduotys, priklausančios tam tikrai vartotojo istorijai yra užbaigtos,
-prašomas kliento leidimas sudiegti PĮ pakeitimus į testinę aplinką, kurioje kliento testuotojai galėtų ištestuoti naują funkcionalumą.
+prašomas kliento leidimas diegti PĮ pakeitimus į testinę \textit{„test“} aplinką, kurioje kliento testuotojai galėtų ištestuoti naują funkcionalumą.
 
 Jeigu funkcionalumas turi klaidų - testuotojai užregistruoja jas „Phabricator“ sistemoje. Iš šios sistemos, jos perkeliamos į „Jira“ sistemą, atliekami klaidų taisymo darbai, pataisymai
-sukeliami į testinę aplinką, kol galiausiai įgyvendintas funkcionalumas atitinka specifikuotam reikalavimuose. Kai yra įgyvendintas tam tikras funkcionalumo paketas, planuojamas
-išleidimas (angl. „release“) į produkcinę aplinką. Kai visas naujas funkcionalumas pilnai ištestuotas, ir regresinis testavimas neatranda klaidų - naujo funkcionalumo paketas
-sudiegiamas į produkcinę aplinką. Šie diegimai atliekami vidutiniškai kartą per mėnesį.
+sukeliami į testinę aplinką, kol galiausiai įgyvendintas funkcionalumas atitinka tam, koks buvo specifikuotas reikalavimuose.
+Kai yra įgyvendintas tam tikras funkcionalumo paketas, planuojamas išleidimas (angl. \textit{„release“}) į produkcinę aplinką.
+Kai visas naujas funkcionalumas pilnai ištestuotas, ir regresinis testavimas neatranda klaidų - naujo funkcionalumo paketas diegiamas į \textit{„staging“} aplinką,
+kuri yra pagal konfigūraciją - identiška produkcinei. Atlikus paskutinius testavimo darbus, funkcionalumo paketas
+diegiamas į produkcinę \textit{„prod“} aplinką. Šie diegimai atliekami vidutiniškai kartą per mėnesį.
+
+Programavimo darbai vykdomi lokaliai, norint savarankiškai ištestuoti tam tikrą funkcionalumą, kai reikalinga visa infrastruktūra, pakeitimai diegiami į \textit{„develop“} aplinką.
 
 
 \subsection{Projekte naudojamos technologijos}
-Kaip jau buvo minėta ankščiau, sistemos UI dalis yra parašyta su JavaScript kalba, naudojama „React“ biblioteka. Vartotojo sąsajai naudojama „Material UI“ biblioteka.
-UI aplikacija su serverine dalimi bendrauja naudojant tarpinį serverį - „Nginx“.
-Sistemos serverinė dalis parašyta su Java programavimo kalba, naudojamas „Spring“ programavimo karkasas. Serverinė dalis yra
+Kaip jau buvo minėta ankščiau, sistemos UI dalis yra parašyta su JavaScript kalba, naudojama \textit{„React“} biblioteka. Vartotojo sąsajai naudojama „Material UI“ biblioteka.
+UI aplikacija su serverine dalimi bendrauja naudojant tarpinį serverį - \textit{„Nginx“}.
+Sistemos serverinė dalis parašyta su Java programavimo kalba, naudojamas \textit{„Spring“} programavimo karkasas. Serverinė dalis yra
 įgyvendina mikroservisų architektūrinį principą. Servisai tarpusavyje apsikeičia duomenimis per
 REST arba SOAP sąsają. Du servisai, daugiausiai bendraujantys su UI, įgyvendina naudojant CQRS architektūrinį principą,
 kuris atskiria duomenų įrašymo ir duomenų užklausų sluoksnius. Vienas servisas atsakingas už užsakymų krepšelio valdymą, sistemoje įgyvendinta didelė
 aibė skirtingų procesų (\ref{img:options} pav.),
 kurie vykdomi per užsakymų krepšelį. Kitas servisas atsakingas krepšelio apdorojimą, iš gautų duomenų sugeneruojami sutarties duomenys, kurie nukeliauja į vidinę apskaitos sistemą.
-Žinutėms (angl. „events“) tarp servisų naudojamas žinučių brokeris „Apache Kafka“. Kadangi servisas, bendraujantis su apskaitos sistema naudoja SOAP protokolą, buvo sukūrtas
-servisas, kurio paskirtis - gaunamas REST užklausas, naudojant „Apache Camel“ technologiją, paversti į SOAP užklausas, ir perduoti dedikuotam servisui.
+Žinutėms (angl. \textit{„events“}) tarp servisų naudojamas žinučių brokeris \textit{„Apache Kafka“}. Kadangi servisas, bendraujantis su apskaitos sistema naudoja SOAP protokolą, buvo sukūrtas
+servisas, kurio paskirtis - gaunamas REST užklausas, naudojant \textit{„Apache Camel“} technologiją, paversti į SOAP užklausas, ir perduoti dedikuotam servisui.
 Taip pat yra ir kiti servisai, turintys po vieną paskirtį, pavyzdžiui, vienas servisas atsakingas už „PDF“ sutarčių generavimą, kitas - už el. laiškų siuntimą ir t.t.
-Kadangi „Bitė Lietuva“ priklauso „Bitė“ grupei, kurioje taip pat vykdo veiklą įmonė „Bitė Latvija“, tam tikri servisai veikia tik vienos šalies aplinkose.
+Kadangi \textit{„Bitė Lietuva“} priklauso \textit{„Bitė“} grupei, kurioje taip pat vykdo veiklą įmonė „Bitė Latvija“, tam tikri servisai veikia tik vienos šalies aplinkose.
 
 \begin{figure}[H]
     \centering
@@ -63,7 +67,7 @@ Kadangi „Bitė Lietuva“ priklauso „Bitė“ grupei, kurioje taip pat vykdo
     \label{img:options}
 \end{figure}
 
-Vidinė apskaitos sistema naudoja „Oracle“ duomenų bazę, į kurią duomenys perduodami naudojant saugomas (angl.\textit{„Stored“}) procedūras. Šias proceduras kviečia dedikuotas servisas.
+Vidinė apskaitos sistema naudoja „Oracle“ duomenų bazę, į kurią duomenys perduodami naudojant saugomas (angl.\textit{„Stored“}) procedūras. Šias procedūras kviečia dedikuotas servisas.
 
 Mikroservisų architektūros valdymui naudojama konteinerių technologija „Docker“, kuri leidžia programų kūrėjams ir sistemų administratoriams lengvai ir greitai
 talpinti aplikacijas konteineriuose, kurie izoliuoti nuo operacinės sistemos. Konteinerizuotos aplikacijos diegimui naudojama „Kubernetes“ konteinerių orkestravimo technologija.

@@ -141,7 +141,7 @@
       {\begin{tabular}[t]{l l}%
            & \medskip \null\hfill  Praktiką atliko: \hspace{3 mm} \tabove {\normalsize {Maksim Prokofjev}}{4.75in}  \\
            \vspace{1cm}
-           & \medskip \null\hfill \hspace{3.1cm} \tabove {\normalsize {Programų sistemos, bakaluras, IV kursas}}{4.75in} \\
+           & \medskip \null\hfill \hspace{3.1cm} \tabove {\normalsize {Programų sistemos, bakalauras, IV kursas}}{4.75in} \\
 
            & \medskip \null\hfill Praktikos institucija:\hspace{3 mm} \tabove {\normalsize {UAB „INVENTI“}}{4.5in} \\
            & \medskip \null\hfill Organizacijos praktikos vadovas:\hspace{3 mm} \tabove {\normalsize {Projektų vadovė Kristina Šaulinskienė}}{3.7in} \\
