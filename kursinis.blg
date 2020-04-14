@@ -1,14 +1,14 @@
 [0] Config.pm:304> INFO - This is Biber 2.12
 [0] Config.pm:307> INFO - Logfile is 'kursinis.blg'
-[19] biber:315> INFO - === Tue Apr 14, 2020, 19:19:52
-[38] Biber.pm:371> INFO - Reading 'kursinis.bcf'
-[83] Biber.pm:889> INFO - Found 2 citekeys in bib section 0
+[20] biber:315> INFO - === Tue Apr 14, 2020, 23:51:20
+[36] Biber.pm:371> INFO - Reading 'kursinis.bcf'
+[84] Biber.pm:889> INFO - Found 2 citekeys in bib section 0
 [94] Biber.pm:4093> INFO - Processing section 0
-[103] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
+[102] Biber.pm:4254> INFO - Looking for bibtex format file 'bibliografija.bib' for section 0
 [103] bibtex.pm:1512> INFO - LaTeX decoding ...
-[107] bibtex.pm:1329> INFO - Found BibTeX data source 'bibliografija.bib'
-[121] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[122] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
-[122] Biber.pm:3921> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'lt-LT'
-[128] bbl.pm:636> INFO - Writing 'kursinis.bbl' with encoding 'UTF-8'
-[129] bbl.pm:739> INFO - Output to kursinis.bbl
+[105] bibtex.pm:1329> INFO - Found BibTeX data source 'bibliografija.bib'
+[120] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'variable = shifted' with 'variable = non-ignorable'
+[120] UCollate.pm:68> INFO - Overriding locale 'lt-LT' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[120] Biber.pm:3921> INFO - Sorting list 'anyt/global//global/global' of type 'entry' with template 'anyt' and locale 'lt-LT'
+[125] bbl.pm:636> INFO - Writing 'kursinis.bbl' with encoding 'UTF-8'
+[126] bbl.pm:739> INFO - Output to kursinis.bbl

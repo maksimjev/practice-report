@@ -1,3 +1,106 @@
-\subsection{Užduočių vykdymas}
+\subsection{Programavimo darbai}
 
-\subsubsection{}
+\subsubsection{Užduotis: Pritaikyti PDF šablonus televizijos paslaugų sutartims}
+Šios užduoties aprašymas apima kelias užduotis, kadangi sistemoje yra didelis kiekis skirtingų PDF šablonų,
+pavyzdžiui, nauja sutartis, sutarties nutraukimas, paslaugų pajungimas, paslaugų nutraukimas ir t.t.
+Klientas pateikė PDF failus, kaip turi atrodyti nauji televizijos sutarčių šablonai (\ref{img:contract} pav.).
+Taip pat pakeitimai turi būti pritaikyti ne tik lietuviškoms sutartims, bet ir latviškoms.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/contract.png}
+    \caption{Naujas televizijos paslaugų PDF šalbonas.}
+    \label{img:contract}
+\end{figure}
+
+\textbf{Problema.} Visi sistemos procesai ir esybės remiasi į mobilųjį numerį (toliau „MSISDN“). Televizijos paslaugos (toliau „TV“) telefono numerio neturi, todėl buvo nuspręsta,
+kad pagrindinis TV paslaugų unikalus identifikatorius bus elektroninis paštas (\ref{img:medus} pav.).
+
+\textbf{Analizė.} Telekomunikacijų paslaugų (toliau „GSM“) PDF šablonai yra labai panašūs į TV paslaugų šablonus, tam tikrose vietose vietoj „mobilusis numeris“ pasikeisdavo į
+„elektroninis paštas“. Tam tikrose vietose pasikeisdavo statinis tekstas. Tačiau tam tikri šablonai buvo visiškai skirtingi.
+Kaip ir buvo minėta, mikroservisų architektūroje kiekvienas servisas atsakingas už tam tikrą funkcionalumą, šiuo atveju, yra du servisai -
+vienas atsakingas už lietuviškų sutarčių generavimą, kitas - už latviškų. PDF dokumentų generavimui naudojama „Apache FOP“ „XML“ pagrįsta biblioteka.
+„XML“ faile yra aprašomos dokumento formatavimo, stiliaus taisyklės, biblioteka nuskaito iš Java kalbos objekto duomenis, ir juos atvaizduoja nurodytose „XML“ failo vietose.
+Taip pat biblioteka palaiko sąlyginius sakinius, ciklus duomenų generavimui.
+
+\textbf{Sprendimas.} Pirminis sprendimas buvo prie PDF dokumento generavimo užklausos objekto pridėti papildomą el. pašto lauką, tačiau šis sprendimas yra gali sukelti klaidų, todėl
+jo buvo atsisakyta. Kadangi didžioji dalis sistemos (ne tik PDF dokumentų generavimo) funkcionalumo remiasi į MSISDN lauką, nuspręsta šį lauka pervadinti
+į \textit{}„accessPointAddress“, ir jame leisti laikyti elektroninį paštą.
+Šis sprendimas nėra pats geriausias, tačiau greičiausias. Šis sprendimas įtakojo PDF dokumentų generavimą, ir tam buvo įvesta žyma
+\textit{„contractType“}, kurios reikšmės gali būti arba \textit{„TV“}, arba \textit{„GSM“}.
+
+\textbf{Įgyvendinimas.} Pagal \textit{„contractType“} žymą, atitinkamai buvo generuojama arba TV, arba GSM paslaugų sutartys (\ref{img:contractType} pav.).
+Taip pat generuojamiems PDF dokumentams, buvo parašyti parametrizuoti „JUnit“ bibliotekos testai (\ref{img:template} pav.), kurie generuoja skirtingus PDF dokumentus su
+skirtingais parametrais (\ref{img:param-tests} pav.), bei tikrina, ar šie duomenys atvaizduojami dokumente.
+Tačiau surašius testavimo atvejus, atsirado kita problema - kliento parašas. UI aplikacija, naudojama „Bitė“ salone,
+yra prijungta prie planšetinio kompiuterio, kuris, gaudamas žinutę iš aplikacijos, atvaizduoja kliento sutartį, bei leidžia naudojant elektroninį pieštuką, dokumentą pasirašyti.
+
+Parašas buvo įklijuojamas į PDF dokumentą. Problema buvo tame, kad PDF dokumentuose, parašas atsidūrdavo ne jam skirtoje vietoje.
+Parametrizuoti testai leido anksti atrasti šios problemos egzistavimą, ir atlikus analizę paaiškėjo, kad parašas įklijuojamas pagal šablonui nurodytas koordinates.
+Galiausiai problema buvo išspręsta šablonus pakoregavus taip, kad parašo vieta visada liktų toje pačioje vietoje, nepriklausomai nuo duomenų.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/contractType.png}
+    \caption{\textit{„contractType“} žymos tikrinimas.}
+    \label{img:contractType}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{img/template.png}
+    \caption{Parametrizuoto testo šablonas.}
+    \label{img:template}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{img/param-tests.png}
+    \caption{Parametrizuoto testo duomenų sukurimas.}
+    \label{img:param-tests}
+\end{figure}
+
+
+\subsubsection{Užduotis: El. pašto adreso keitimas.}
+\textbf{Problema.} TV sutarties identifikatorius - el. pašto adresas, gali būti keičiamas, tačiau jis turi išlikti unikalus.
+Pakeitimas turi atsivaizduoti vidinėje apskaitos sistemoje, taip pat UI aplikacijos pakeitimų istorijoje. Keičiant el. pašto adresą, turi būti
+atliekamas asinchroninis tikrinimas, ar nurodytas naujas el. pašto adresas yra validus (\ref{img:email-change} pav.).
+
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.3]{img/email-change.png}
+    \caption{El. pašto keitimo procesas.}
+    \label{img:email-change}
+\end{figure}
+
+\textbf{Analizė.} Atliekant analizę pastebėta, kad procesas beveik sutampa su „MSISDN“ keitimo procesu, išskyrus validavimo žingsnį, kadangi keičiant „MSISDN“,
+vartotojas atlieka paiešką tarp neužimtų „MSISDN“, o el. pašto adresu atveju - adresas įvedamas rankiniu būdu. Pakeitimas turi būti atliktas keliuose servisuose,
+taip pat ir UI aplikacijoje. Taip pat pastebėta, kad el. pašto adreso validavimo API yra įgyvendintas, ir naudojamas naujos TV paslaugų sutarties sudarymo metu.
+
+\textbf{Sprendimas.}
+Nuspręsta, kad procesas bus įgyvendintas analogiškai, kaip įgyvendintas „MSISDN“ keitimo procesas, išskyrus validavimo žingsnį. Tikrinimui bus perpanaudotas
+egzistuojantis el. pašto adreso validavimo API.
+
+\textbf{Įgyvendinimas.}
+Saugomas procedūras įgyvendina „Bitė Lietuva“ programuotojai, reikėjo įgyvendinti šios procedūros kvietimą servise, kuris sąveikauja su apskaitos sistemos duomenų baze.
+Buvo įgyvendintas SOAP protokolo API, kurio kvietimui buvo atnaujintas kitas servisas, atsakingas už REST užklausų vertimą į SOAP. Šio serviso API kvietimas įgyvendintas
+kitame servise, kuris glaudžiai bendrauja su UI aplikacija. Šiame servise taip pat įgyvendintas el. pašto validavimas, tam kad vartotojas negalėtų apeiti šį žingsnį aplikacijos UI
+sluoksnyje. El. pašto adreso validavimo žingsnis buvo įgyvendintas tiek sinchroniškai, tiek asinchroniškai (\ref{img:email-validate} pav.).
+Sudėtingumas iškilo atlikus el. pašto validavimo API. API įgyvendintas naudojant „Apache Camel“ technologiją, su kurią patirties neturėjau.
+Naujos paslaugų sutarties sudarymo metu, el. pašto validavimo API reikalauja kitų duomenų iš užsakymų krepšelio, kurių el. pašto keitimo proceso metu, nėra.
+Taip pat servisas, API kvietimo metu, iškviečia 5 skirtingų servisų API, tam kad užtikrinti el. pašto unikalumą. Jeigu bent vienas API grąžina klaidą, vartotojui grąžinamas
+klaidos kodas, o UI aplikacijoje pagal klaidos kodą parenkamas vertimas.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.7]{img/email-validate.png}
+    \caption{„React“ komponento el. pašto keitimo validavimo kodas.}
+    \label{img:email-validate}
+\end{figure}
+
+El. pašto keitimo metu, tam tikros validacijos nėra būtinos, todėl nuspręsta validavimo API perduoti el. pašto validavimo proceso tipą, pagal kurį servisas nusprendžia,
+kuriuos kvietimus būtina atlikti.
+
+
+\subsubsection{Užduotis: .}

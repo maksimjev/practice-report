@@ -3,10 +3,10 @@
 \subsection{Projektas}
 Kaip buvo minėta ankščiau, profesinės praktikos metu visi darbai buvo vykdomi su „Bitė Lietuva“ vidinė klientų aptarnavimo informacinė sistema.
 „Bitė Lietuva“ yra įmonės nuolatinis klientas, 2018 metais „INVENTI“ sukūrė šią sistemą \cite{medus}, ir integravo su egzistuojančiomis „Bitė Lietuva“ sistemomis.
-Sistema įmonės viduje turi kodinį pavadinimą „medus“ \ref{img:medus}.
+Sistema įmonės viduje turi kodinį pavadinimą „medus“ (\ref{img:medus} pav.).
 Klientui „Bitė Lietuva“ atsirado poreikis atlikti televizijos paslaugų pardavimą per šią sistemą, tam kad galutinis vartotojas galėtų naudotis
 „Go3 | BITĖ“ televizijos paslaugomis \cite{go3}. „INVENTI“ pasirašė sutartį atlikti šį projektą dviem etapais.
-Taip pat prie projekto prisijungė ir kiti vendoriai - įmonė „Baltic Amadeus“. Dėl COVID-19 grėsmės, „Bitė Lietuva“ siūlo televizijos paslaugomis 3 mėnesius naudotis nemokamai.
+Taip pat prie projekto prisijungė ir kiti vendoriai - įmonė „Baltic Amadeus“.
 
 
 \begin{figure}[H]
@@ -18,7 +18,7 @@ Taip pat prie projekto prisijungė ir kiti vendoriai - įmonė „Baltic Amadeus
 
 \subsection{Darbo procesas}
 Prieš pradedant projektą, komanda atlieka kliento pateiktų vartotojų istorijų analizę, išskaido jas į užduotis, kiekvieną užduotį įvertina, ir sudeda į projekto neatliktų užduočių sąrašą.
-Darbas vykdavo pagal agile metodologiją, kas dvi savaites planuojami sprintai. Sprinto planavimo metu, visa komanda susirenka ir padaro atliktų užduočių apžvalgą „Jira“
+Darbas vykdavo pagal Agile metodologiją, kas dvi savaites planuojami sprintai. Sprinto planavimo metu, visa komanda susirenka ir padaro atliktų užduočių apžvalgą „Jira“
 užduočių projekto sistemoje, apžvelgiama, kokios užduotys buvo atliktos praeitame sprinte, o kurios keliauja į naują.
 Atlikus peržiūrą, praeitas sprintas uždaromas, atidaromas naujas. Neužbaigtos užduotys perkeliamos į naują sprintą, ir tada atliekama neatliktų užduočių sąrašo analizė.
 Iš neatliktų užduočių sąrašo, užduotys perkeliamos į naują sprintą pagal svarbumo prioritetą, tol, kol nebus viršytas dviejų savaičių darbo valandų limitas. Įmonėje taikoma praktika,
@@ -48,7 +48,8 @@ UI aplikacija su serverine dalimi bendrauja naudojant tarpinį serverį - „Ngi
 Sistemos serverinė dalis parašyta su Java programavimo kalba, naudojamas „Spring“ programavimo karkasas. Serverinė dalis yra
 įgyvendina mikroservisų architektūrinį principą. Servisai tarpusavyje apsikeičia duomenimis per
 REST arba SOAP sąsają. Du servisai, daugiausiai bendraujantys su UI, įgyvendina naudojant CQRS architektūrinį principą,
-kuris atskiria duomenų įrašymo ir duomenų užklausų sluoksnius. Vienas servisas atsakingas už užsakymų krepšelio valdymą, sistemoje įgyvendinta didelė aibė skirtingų procesų \ref{img:options},
+kuris atskiria duomenų įrašymo ir duomenų užklausų sluoksnius. Vienas servisas atsakingas už užsakymų krepšelio valdymą, sistemoje įgyvendinta didelė
+aibė skirtingų procesų (\ref{img:options} pav.),
 kurie vykdomi per užsakymų krepšelį. Kitas servisas atsakingas krepšelio apdorojimą, iš gautų duomenų sugeneruojami sutarties duomenys, kurie nukeliauja į vidinę apskaitos sistemą.
 Žinutėms (angl. „events“) tarp servisų naudojamas žinučių brokeris „Apache Kafka“. Kadangi servisas, bendraujantis su apskaitos sistema naudoja SOAP protokolą, buvo sukūrtas
 servisas, kurio paskirtis - gaunamas REST užklausas, naudojant „Apache Camel“ technologiją, paversti į SOAP užklausas, ir perduoti dedikuotam servisui.
@@ -61,6 +62,8 @@ Kadangi „Bitė Lietuva“ priklauso „Bitė“ grupei, kurioje taip pat vykdo
     \caption{Galimi kliento sutarties procesai.}
     \label{img:options}
 \end{figure}
+
+Vidinė apskaitos sistema naudoja „Oracle“ duomenų bazę, į kurią duomenys perduodami naudojant saugomas (angl.\textit{„Stored“}) procedūras. Šias proceduras kviečia dedikuotas servisas.
 
 Mikroservisų architektūros valdymui naudojama konteinerių technologija „Docker“, kuri leidžia programų kūrėjams ir sistemų administratoriams lengvai ir greitai
 talpinti aplikacijas konteineriuose, kurie izoliuoti nuo operacinės sistemos. Konteinerizuotos aplikacijos diegimui naudojama „Kubernetes“ konteinerių orkestravimo technologija.
