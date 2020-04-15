@@ -10,7 +10,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {1.2.}Įmonės organizacinė struktūra}{5}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {1.3.}Darbo sąlygos}{5}% 
+\contentsline {subsection}{\numberline {1.3.}Darbo sąlygos}{6}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.}Praktikos veiklos aprašymas}{7}% 
 \defcounter {refsection}{0}\relax 
@@ -28,16 +28,18 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {3.3.}Užduotis: Krepšelio REST API dokumentacija.}{13}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.}Rezultatai}{16}% 
+\contentsline {section}{\numberline {4.}Rezultatai išvados ir pasiūlymai}{16}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {4.1.}Išvados ir apibendrinimai}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {4.2.}Privalumai ir trūkumai}{16}% 
+\contentsline {subsection}{\numberline {4.2.}Praktikos darbo privalumai ir trūkumai}{16}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.2.1.}Privalumai}{16}% 
 \defcounter {refsection}{0}\relax 
 \contentsline {subsubsection}{\numberline {4.2.2.}Trūkumai}{16}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {subsubsection}{\numberline {4.2.3.}Pasiūlymai}{17}% 
+\contentsline {subsection}{\numberline {4.3.}Pasiūlymai}{17}% 
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{Šaltiniai}{18}% 
+\contentsline {subsubsection}{\numberline {4.3.1.}Pasiūlymai įmonei}{17}% 
+\defcounter {refsection}{0}\relax 
+\contentsline {subsubsection}{\numberline {4.3.2.}Pasiūlymai universitetui}{17}% 

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.23)  15 APR 2020 01:19
+This is XeTeX, Version 3.14159265-2.6-0.99999 (TeX Live 2019/dev/Debian) (preloaded format=xelatex 2019.8.23)  15 APR 2020 21:14
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1205,31 +1205,20 @@ Overfull \hbox (4.80023pt too wide) in paragraph at lines 131--132
 
 File: img/customer-dto.png Graphic file (type bmp)
 <img/customer-dto.png>
-) (./include/4-summary.tex [14] [15]) [16
+) (./include/4-summary.tex [14] [15] [16
 
-] [17]
-
-Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
-(biblatex)                Please use '\mkdaterangeiso'.
-
-
-Package biblatex Warning: '\mkdaterangeiso8601' is deprecated.
-(biblatex)                Please use '\mkdaterangeiso'.
-
-[18
-
-] (./kursinis.aux)
+]) [17] (./kursinis.aux)
 Package logreq Info: Writing requests to 'kursinis.run.xml'.
 \openout1 = `kursinis.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26268 strings out of 492912
- 513508 string characters out of 6134893
+ 26064 strings out of 492912
+ 509397 string characters out of 6134893
  1021607 words of memory out of 5000000
- 29966 multiletter control sequences out of 15000+600000
- 546949 words of font info for 111 fonts, out of 8000000 for 9000
+ 29764 multiletter control sequences out of 15000+600000
+ 546941 words of font info for 110 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 67i,17n,96p,879b,6114s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 67i,17n,96p,879b,790s stack positions out of 5000i,500n,10000p,200000b,80000s
 
-Output written on kursinis.pdf (18 pages).
+Output written on kursinis.pdf (17 pages).
