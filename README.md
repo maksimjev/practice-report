@@ -1,2 +1,2 @@
-# course-paper
-Vilniaus Universiteto Programų Sistemų 4 kurso studento projektinis darbas 
+# practice-report
+Vilniaus Universiteto Programų Sistemų 4 kurso studento praktikos ataskaita 
